@@ -1,0 +1,35 @@
+{
+  "name": "dsh-agentic-boost-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DSH Agentic Boost MVP: task-loop guidance section + verify-check model tool + lightweight pre-execute guard, with plugin-scoped redacted diagnostics.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib/",
+    "skills/",
+    "scripts/",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.js\""
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
